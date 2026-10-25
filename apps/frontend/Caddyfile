@@ -1,0 +1,29 @@
+http://localhost {
+    encode zstd gzip
+
+    @api path /api /api/*
+    handle @api {
+        reverse_proxy backend:3000
+    }
+
+    handle {
+        root * /srv
+        try_files {path} /index.html
+        file_server
+    }
+}
+
+rvalte.hu {
+    encode zstd gzip
+
+    @api path /api /api/*
+    handle @api {
+        reverse_proxy backend:3000
+    }
+
+    handle {
+        root * /srv
+        try_files {path} /index.html
+        file_server
+    }
+}

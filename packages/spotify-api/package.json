@@ -1,0 +1,25 @@
+{
+    "name": "@rvalte-hu/spotify-api",
+    "author": "Fuyooo",
+    "description": "Spotify API package. Made me cry.",
+    "version": "0.0.1",
+    "private": true,
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "type": "module",
+    "scripts": {
+        "build": "tsc -p tsconfig.json"
+    },
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.js"
+        }
+    },
+    "dependencies": {
+        "@rvalte-hu/config": "*",
+        "@rvalte-hu/logger": "*",
+        "@rvalte-hu/redis": "*"
+    }
+}

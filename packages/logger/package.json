@@ -1,0 +1,28 @@
+{
+    "name": "@rvalte-hu/logger",
+    "author": "Fuyooo",
+    "description": "Logger package",
+    "version": "0.0.1",
+    "private": true,
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "type": "module",
+    "scripts": {
+        "build": "tsc -p tsconfig.json"
+    },
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.js"
+        }
+    },
+    "devDependencies": {
+        "@types/node": "^25.9.0"
+    },
+    "dependencies": {
+        "@rvalte-hu/config": "*",
+        "pino": "^10.3.1",
+        "pino-pretty": "^13.1.3"
+    }
+}

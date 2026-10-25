@@ -1,0 +1,35 @@
+{
+    "name": "rvalte-hu",
+    "author": "Fuyooo",
+    "description": "A collection of packages & apps for the rvalte.hu project.",
+    "version": "0.0.1",
+    "private": true,
+    "workspaces": [
+        "apps/**",
+        "packages/**"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/askfuyooo/rvalte.hu.git"
+    },
+    "scripts": {
+        "check": "tsc --noEmit",
+        "build": "tsc -b --clean && tsc -b",
+        "dev:backend": "npm run dev -w @rvalte-hu/backend",
+        "dev:frontend": "npm run dev -w @rvalte-hu/frontend",
+        "dev": "run-p dev:backend dev:frontend"
+    },
+    "keywords": [],
+    "license": "MIT",
+    "type": "module",
+    "bugs": {
+        "url": "https://github.com/askfuyooo/rvalte.hu/issues"
+    },
+    "homepage": "https://github.com/askfuyooo/rvalte.hu#readme",
+    "devDependencies": {
+        "@types/node": "^25.9.0",
+        "npm-run-all": "^4.1.5",
+        "tsx": "^4.22.3",
+        "typescript": "^6.0.3"
+    }
+}

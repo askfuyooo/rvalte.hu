@@ -1,0 +1,286 @@
+.skeleton-block {
+    position: relative;
+    display: block;
+    flex: 0 0 auto;
+    overflow: hidden;
+    border-radius: 2px;
+    background: linear-gradient(
+        100deg,
+        rgba(255, 255, 255, 0.045),
+        rgba(129, 152, 255, 0.085),
+        rgba(255, 255, 255, 0.035)
+    );
+    isolation: isolate;
+}
+
+.skeleton-block::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    transform: translateX(-110%);
+    background: linear-gradient(
+        100deg,
+        transparent 15%,
+        rgba(212, 220, 255, 0.13) 48%,
+        transparent 82%
+    );
+    animation: skeleton-shimmer 1.55s ease-in-out infinite;
+}
+
+@keyframes skeleton-shimmer {
+    to {
+        transform: translateX(110%);
+    }
+}
+
+.header-cta--skeleton {
+    width: 105px;
+    height: 39px;
+    justify-content: center;
+    padding: 10px 13px;
+    pointer-events: none;
+}
+
+.skeleton-header-cta {
+    width: 58px;
+    height: 9px;
+}
+
+.social-line--skeleton {
+    pointer-events: none;
+}
+
+.social-skeleton-title {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-width: 0;
+}
+
+.skeleton-social-num {
+    width: 14px;
+    height: 7px;
+}
+.skeleton-social-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.skeleton-social-label {
+    height: 25px;
+    width: 148px;
+}
+.skeleton-social-label--2 {
+    width: 104px;
+}
+.skeleton-social-label--3 {
+    width: 202px;
+}
+.skeleton-social-label--4 {
+    width: 220px;
+}
+.skeleton-social-label--5 {
+    width: 118px;
+}
+.skeleton-social-meta {
+    width: 82px;
+    height: 7px;
+}
+.skeleton-social-arrow {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+}
+
+.release-row--skeleton {
+    pointer-events: none;
+}
+
+.release-date--skeleton {
+    align-items: flex-end;
+}
+
+.skeleton-release-year {
+    width: 53px;
+    height: 26px;
+}
+.skeleton-release-date {
+    width: 74px;
+    height: 7px;
+    margin-top: 3px;
+}
+
+.release-skeleton-card {
+    position: relative;
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 174px minmax(0, 1fr);
+    align-items: stretch;
+    overflow: hidden;
+    border: 1px solid rgba(232, 236, 246, 0.13);
+    background: linear-gradient(
+        118deg,
+        rgba(255, 255, 255, 0.035),
+        rgba(255, 255, 255, 0.012) 56%,
+        rgba(129, 152, 255, 0.035)
+    );
+}
+
+.skeleton-release-cover {
+    width: 100%;
+    max-width: 138px;
+    aspect-ratio: 1;
+}
+
+.skeleton-release-index {
+    width: 24px;
+    height: 8px;
+}
+.skeleton-release-tag {
+    width: 54px;
+    height: 18px;
+}
+.skeleton-release-title {
+    width: 72%;
+    height: 45px;
+    margin: 5px 0 10px;
+}
+.skeleton-release-title--2 {
+    width: 58%;
+}
+.skeleton-release-title--3 {
+    width: 80%;
+}
+.skeleton-release-title--4 {
+    width: 64%;
+}
+.skeleton-release-artists {
+    width: 46%;
+    height: 11px;
+}
+.skeleton-release-hint {
+    width: 83px;
+    height: 6px;
+}
+.skeleton-release-dash {
+    width: 24px;
+    height: 1px;
+}
+
+.api-state.is-loading i {
+    animation: skeleton-pulse 1.15s ease-in-out infinite;
+}
+
+.atmosphere-release--skeleton {
+    opacity: 0.43;
+}
+
+.skeleton-atmosphere-cover {
+    width: 100%;
+    height: 100%;
+}
+
+.skeleton-atmosphere-meta {
+    width: 61%;
+    height: 6px;
+    margin-bottom: 3px;
+}
+
+.skeleton-atmosphere-title {
+    width: 85%;
+    height: 15px;
+}
+
+@keyframes skeleton-pulse {
+    0%,
+    100% {
+        opacity: 0.55;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 900px) {
+    .release-skeleton-card {
+        grid-template-columns: 144px minmax(0, 1fr);
+    }
+    .skeleton-release-title {
+        height: 38px;
+    }
+}
+
+@media (max-width: 640px) {
+    .header-cta--skeleton {
+        width: 83px;
+        height: 35px;
+        padding: 9px 10px;
+    }
+    .skeleton-header-cta {
+        width: 48px;
+        height: 8px;
+    }
+    .social-skeleton-title {
+        gap: 9px;
+    }
+    .skeleton-social-label {
+        width: 105px;
+        height: 22px;
+    }
+    .skeleton-social-label--2 {
+        width: 78px;
+    }
+    .skeleton-social-label--3 {
+        width: 112px;
+    }
+    .skeleton-social-label--4 {
+        width: 130px;
+    }
+    .skeleton-social-label--5 {
+        width: 84px;
+    }
+    .skeleton-social-icon {
+        width: 18px;
+        height: 18px;
+    }
+    .skeleton-social-arrow {
+        width: 15px;
+        height: 15px;
+    }
+    .release-skeleton-card {
+        grid-template-columns: 84px minmax(0, 1fr);
+    }
+    .skeleton-release-year {
+        width: 31px;
+        height: 18px;
+    }
+    .skeleton-release-date {
+        width: 34px;
+        height: 6px;
+    }
+    .skeleton-release-title {
+        height: 28px;
+        margin: 4px 0 6px;
+    }
+    .skeleton-release-artists {
+        width: 68%;
+        height: 8px;
+    }
+    .skeleton-release-hint {
+        width: 58px;
+        height: 5px;
+    }
+    .skeleton-release-dash {
+        width: 15px;
+    }
+    .atmosphere-release--skeleton {
+        opacity: 0.24;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skeleton-block::after,
+    .api-state.is-loading i {
+        animation: none;
+    }
+}

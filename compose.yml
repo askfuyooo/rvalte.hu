@@ -1,0 +1,54 @@
+services:
+    redis:
+        image: redis:7
+        container_name: redis
+        restart: unless-stopped
+        ports:
+            - "${REDIS_HOST}:${REDIS_PORT}:${REDIS_PORT}"
+        volumes:
+            - redis_data:/data
+        command:
+            [
+                "redis-server",
+                "--appendonly",
+                "yes",
+                "--requirepass",
+                "${REDIS_PASSWORD}",
+            ]
+
+    backend:
+        build:
+            context: .
+            dockerfile: apps/backend/Dockerfile
+        restart: unless-stopped
+        env_file:
+            - .env
+        environment:
+            NODE_ENV: production
+            REDIS_HOST: redis
+            REDIS_PORT: 6379
+            BACKEND_PORT: 3000
+        depends_on:
+            - redis
+        expose:
+            - "3000"
+
+    frontend:
+        build:
+            context: .
+            dockerfile: apps/frontend/Dockerfile
+        restart: unless-stopped
+        depends_on:
+            - backend
+        ports:
+            - "80:80"
+            - "443:443"
+            - "443:443/udp"
+        volumes:
+            - caddy_data:/data
+            - caddy_config:/config
+
+volumes:
+    redis_data:
+    caddy_data:
+    caddy_config:

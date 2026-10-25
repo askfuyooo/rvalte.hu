@@ -1,0 +1,80 @@
+.social-links {
+    border-top: 1px solid var(--line);
+}
+
+.social-line {
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr) minmax(130px, 190px) 22px;
+    align-items: center;
+    gap: 18px;
+    min-height: 91px;
+    border-bottom: 1px solid var(--line);
+    transition:
+        padding 0.28s ease,
+        background 0.28s ease,
+        color 0.28s ease;
+    position: relative;
+}
+
+.social-line:hover {
+    padding-left: 12px;
+    background: linear-gradient(
+        90deg,
+        rgba(129, 152, 255, 0.08),
+        transparent 66%
+    );
+}
+
+.social-num {
+    font-size: 9px;
+    color: #747c8b;
+}
+
+.social-title {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    font-family: var(--display);
+    font-size: clamp(25px, 3vw, 37px);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    color: #e9ebf1;
+    transition: color 0.22s ease;
+}
+
+.social-title svg,
+.social-title .tiktok-note {
+    flex-shrink: 0;
+    color: var(--blue);
+}
+
+.social-title .tiktok-note {
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.social-line:hover .social-title {
+    color: var(--blue-bright);
+}
+
+.social-handle {
+    justify-self: end;
+    font-size: 8px;
+    color: #818898;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.social-line > svg:last-child {
+    color: #9299a8;
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+.social-line:hover > svg:last-child {
+    transform: translate(3px, -3px);
+    color: var(--blue-bright);
+}

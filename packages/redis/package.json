@@ -1,0 +1,28 @@
+{
+    "name": "@rvalte-hu/redis",
+    "author": "Fuyooo",
+    "description": "Redis package",
+    "version": "0.0.1",
+    "private": true,
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "type": "module",
+    "scripts": {
+        "build": "tsc -p tsconfig.json"
+    },
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "require": "./dist/index.js"
+        }
+    },
+    "dependencies": {
+        "@rvalte-hu/config": "*",
+        "@rvalte-hu/logger": "*",
+        "redis": "^5.12.1"
+    },
+    "devDependencies": {
+        "@types/redis": "^4.0.10"
+    }
+}

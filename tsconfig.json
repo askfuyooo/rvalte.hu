@@ -1,0 +1,10 @@
+{
+    "files": [],
+    "references": [
+        { "path": "./packages/config" },
+        { "path": "./packages/logger" },
+        { "path": "./packages/redis" },
+        { "path": "./packages/spotify-api" },
+        { "path": "./packages/linktree-scraper-api" }
+    ]
+}

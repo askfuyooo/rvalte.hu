@@ -1,0 +1,132 @@
+:root {
+    font-family: "DM Sans", Arial, sans-serif;
+    color: #f0f1f5;
+    background: #0b0d11;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    --paper: #0b0d11;
+    --paper2: #12151b;
+    --ink: #f0f1f5;
+    --muted: #a5a9b3;
+    --line: rgba(232, 236, 246, 0.15);
+    --blue: #8198ff;
+    --blue-bright: #aab7ff;
+    --dark: #07090d;
+    --mono: "DM Mono", monospace;
+    --display: "Oswald", Impact, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html {
+    scroll-behavior: auto;
+    scroll-padding-top: 0;
+    overflow-anchor: none;
+}
+
+html.is-programmatic-scrolling,
+html.is-programmatic-scrolling * {
+    pointer-events: none !important;
+}
+
+html.is-programmatic-scrolling .release-row {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+html.is-programmatic-scrolling .release-expanded {
+    height: 0 !important;
+    opacity: 0 !important;
+    transform: translateY(-7px) !important;
+}
+
+body,
+#root,
+.site-shell {
+    overflow-anchor: none;
+}
+
+#top {
+    scroll-margin-top: 0;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    background: var(--paper);
+    color: var(--ink);
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 5px;
+}
+
+::selection {
+    background: var(--blue);
+    color: #fff;
+}
+
+.site-shell {
+    overflow: clip;
+    position: relative;
+    min-height: 100vh;
+}
+
+.page-width {
+    width: min(1260px, calc(100% - 88px));
+    margin-inline: auto;
+}
+
+.page-progress {
+    position: fixed;
+    z-index: 30;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    background: transparent;
+    pointer-events: none;
+}
+
+.page-progress > div {
+    height: 100%;
+    width: 100%;
+    background: var(--blue);
+    transform-origin: left;
+}
+
+.fixed-portrait {
+    position: fixed;
+    z-index: 1;
+    pointer-events: none;
+    user-select: none;
+    height: min(94vh, 980px);
+    width: auto;
+    max-width: none;
+    object-fit: contain;
+    object-position: center bottom;
+    right: max(-390px, -37.6vh);
+    bottom: -3vh;
+    filter: grayscale(1) contrast(1.1);
+    opacity: 0.105;
+    mix-blend-mode: screen;
+}

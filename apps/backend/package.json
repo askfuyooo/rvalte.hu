@@ -1,0 +1,21 @@
+{
+    "name": "@rvalte-hu/backend",
+    "version": "0.0.1",
+    "private": true,
+    "type": "module",
+    "main": "./src/server.ts",
+    "scripts": {
+        "dev": "tsx watch src/server.ts",
+        "build": "tsc -b --clean && tsc -b"
+    },
+    "dependencies": {
+        "express": "^5.3.0",
+        "@rvalte-hu/config": "^0.0.1",
+        "@rvalte-hu/spotify-api": "^0.0.1",
+        "@rvalte-hu/linktree-scraper-api": "^0.0.1",
+        "@rvalte-hu/logger": "^0.0.1"
+    },
+    "devDependencies": {
+        "@types/express": "^5.0.6"
+    }
+}

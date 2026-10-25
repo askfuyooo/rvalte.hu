@@ -1,0 +1,33 @@
+# dependencies
+node_modules/
+
+# build
+dist/
+build/
+
+# typescript
+*.tsbuildinfo
+
+# env
+.env
+.env.*
+!.env.example
+
+# logs
+logs/
+*.log
+npm-debug.log*
+
+# coverage
+coverage/
+.nyc_output/
+
+# cache
+.npm
+.eslintcache
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

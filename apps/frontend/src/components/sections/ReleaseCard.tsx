@@ -18,7 +18,7 @@ const formatFullDate = (date: string): string => {
 
 const formatDayMonth = (date: string): string => {
     const [, month, day] = date.split("-");
-    if (month && day) return `${day}.${month}.`;
+    if (month && day) return `${month}.${day}.`;
     if (month) return `${month}. hó`;
     return date.slice(0, 4);
 };

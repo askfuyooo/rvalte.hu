@@ -34,7 +34,12 @@ export const SiteHeader = () => {
                     className="wordmark"
                     aria-label="rvalte.hu - Rajongói, nem hivatalos weboldal"
                 >
-                    rvalte
+                    <img
+                        className="wordmark-signature"
+                        src="/imgs/valter-signature.png"
+                        alt="rvalte"
+                        draggable={false}
+                    />
                 </a>
                 <span
                     className="beta-badge"

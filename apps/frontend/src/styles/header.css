@@ -29,6 +29,31 @@
     min-width: 0;
 }
 
+.wordmark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    line-height: 1;
+}
+
+.wordmark-signature {
+    display: block;
+    width: auto;
+    height: 60px;
+    max-width: 64px;
+    object-fit: contain;
+    object-position: center;
+    flex: 0 0 auto;
+    user-select: none;
+    -webkit-user-drag: none;
+    transition: height 0.25s ease, opacity 0.2s ease;
+}
+
+.site-header.is-scrolled .wordmark-signature {
+    height: 51px;
+}
+
 .beta-badge {
     display: inline-flex;
     align-items: center;

@@ -107,6 +107,12 @@
         flex: 0 1 auto;
     }
 
+    .wordmark-signature,
+    .site-header.is-scrolled .wordmark-signature {
+        height: 49px;
+        max-width: 54px;
+    }
+
     .beta-badge {
         gap: 5px;
         padding: 6px 7px;

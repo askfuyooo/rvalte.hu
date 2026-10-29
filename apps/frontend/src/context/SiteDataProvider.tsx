@@ -49,7 +49,13 @@ export const SiteDataProvider = ({ children }: { children: ReactNode }) => {
         timeLineItems.sort((a, b) =>
             b.release_date.localeCompare(a.release_date),
         );
-        setTimeLineItems(timeLineItems);
+        setTimeLineItems(
+            timeLineItems.filter(
+                (i) =>
+                    !i.name.toLowerCase().includes("szalai") &&
+                    !i.name.toLowerCase().includes("tristezza"),
+            ),
+        );
     };
 
     useEffect(() => {

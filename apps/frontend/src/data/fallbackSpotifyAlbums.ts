@@ -44,45 +44,6 @@ export const fallbackSpotifyAlbums: SpotifyAlbum[] = [
     {
         album_type: "featured track",
         total_tracks: 8,
-        url: "https://open.spotify.com/album/3CVzCG2rg95We03qnkRsbt",
-        artists: [
-            {
-                id: "1agkdLAcFqal2AoGMEsqD7",
-                name: "Luis Capasso",
-                url: "https://open.spotify.com/artist/1agkdLAcFqal2AoGMEsqD7",
-            },
-        ],
-        id: "3CVzCG2rg95We03qnkRsbt",
-        name: "Baila con Luis",
-        release_date: "2026-01-04",
-        image: {
-            url: "https://i.scdn.co/image/ab67616d0000b273b7c6fb9dcb9f6f608f045af7",
-            height: 640,
-            width: 640,
-        },
-        tracks: [
-            {
-                artists: [
-                    {
-                        id: "3g7HTvu3GHHLLFxF1B9Esy",
-                        name: "Valter",
-                        url: "https://open.spotify.com/artist/3g7HTvu3GHHLLFxF1B9Esy",
-                    },
-                    {
-                        id: "1Txfsk6qfIjsXhRRNasqia",
-                        name: "Natascia",
-                        url: "https://open.spotify.com/artist/1Txfsk6qfIjsXhRRNasqia",
-                    },
-                ],
-                id: "23gZdff00P1i0y09fSvYgO",
-                name: "Tristezza",
-                url: "https://open.spotify.com/track/23gZdff00P1i0y09fSvYgO",
-            },
-        ],
-    },
-    {
-        album_type: "featured track",
-        total_tracks: 8,
         url: "https://open.spotify.com/album/17ipOdKbDscElW3XDCKCXQ",
         artists: [
             {
